@@ -86,9 +86,9 @@
             <p *ngIf="invalidField('email')">
               Compo e-mail obrigatorio e deve ser valido
             </p>
-            <p *ngIf="acceptTerms()">
-              Deve aceitar os termos
-            </p>
+            <p *ngIf="acceptTerms()">Deve aceitar os termos</p>
+
+            <p *ngIf="invalidPassword()">Senhas n coecidem</p>
           </div>
         </div>
         <div class="form-group text-center m-t-20">
