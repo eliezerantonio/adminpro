@@ -79,6 +79,18 @@
             </div>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col text-danger">
+            <p *ngIf="invalidField('name')">Campo nome obrigatorio</p>
+            <p *ngIf="invalidField('email')">
+              Compo e-mail obrigatorio e deve ser valido
+            </p>
+            <p *ngIf="acceptTerms()">
+              Deve aceitar os termos
+            </p>
+          </div>
+        </div>
         <div class="form-group text-center m-t-20">
           <div class="col-xs-12">
             <button
