@@ -76,7 +76,6 @@ export class LoginComponent implements AfterViewInit {
         Swal.fire('Error', error.error.msg, error);
       }
     );
-
     this.router.navigateByUrl('/');
   }
   equalPasswords() {}
