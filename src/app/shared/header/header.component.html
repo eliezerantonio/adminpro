@@ -315,21 +315,18 @@
             data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false"
-            ><img
-              src="./assets/images/users/1.jpg"
-              alt="user"
-              class="profile-pic"
+            ><img [src]="user.imageUrl" alt="user" class="profile-pic"
           /></a>
           <div class="dropdown-menu dropdown-menu-right animated fadeIn fast">
             <ul class="dropdown-user">
               <li>
                 <div class="dw-user-box">
                   <div class="u-img">
-                    <img src="./assets/images/users/1.jpg" alt="user" />
+                    <img [src]="user.imageUrl" alt="user" />
                   </div>
                   <div class="u-text">
-                    <h4>Steave Jobs</h4>
-                    <p class="text-muted">varun@gmail.com</p>
+                    <h4>{{ user.name }}</h4>
+                    <p class="text-muted">{{ user.email }}</p>
                     <a
                       href="pages-profile.html"
                       class="btn btn-rounded btn-danger btn-sm"
@@ -350,13 +347,13 @@
               </li>
               <li role="separator" class="divider"></li>
               <li>
-                <a href="#"><i class="ti-settings"></i> Account Setting</a>
+                <a routerLink="/dashboard/account-settings"
+                  ><i class="ti-settings"></i> Account Setting</a
+                >
               </li>
               <li role="separator" class="divider"></li>
               <li>
-                <a routerLink="/login"
-                  ><i class="fa fa-power-off"></i> Logout</a
-                >
+                <a (click)="logout()"><i class="fa fa-power-off"></i> Logout</a>
               </li>
             </ul>
           </div>
